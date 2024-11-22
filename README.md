@@ -25,13 +25,3 @@
 - Real-time order status updates: Pending, Processing, and Delivering, with time countdowns.  
 
 ## Installation  
-
-### Prerequisites  
-- Flutter SDK  
-- Firebase configuration  
-- Backend API for order and food management  
-
-### Steps  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/carnival-fine-dining.git
