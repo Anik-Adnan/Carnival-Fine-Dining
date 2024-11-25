@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "492672993820",
+    "project_id": "carnival-fine-dine-8a8a9",
+    "storage_bucket": "carnival-fine-dine-8a8a9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492672993820:android:a9ebb833ff88c41ab66dd9",
+        "android_client_info": {
+          "package_name": "com.example.carnival_fine_dining"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyGS0dEbbVppe4x9S-wnOLhD7XtNRy-Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
