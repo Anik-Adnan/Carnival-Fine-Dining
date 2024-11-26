@@ -18,17 +18,19 @@ class SignInController extends GetxController{
       EasyLoading.show(status: "Please wait");
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(
           email: userEmail, password: userPassword);
-
-      EasyLoading.dismiss();
       return userCredential;
 
     } on FirebaseAuthException catch (e) {
-      EasyLoading.dismiss();
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
       } else if (e.code == 'wrong-password') {
         print('Wrong password provided for that user.');
+      }else {
+        Get.snackbar('Error', 'Something went wrong. Try again later.',
+            snackPosition: SnackPosition.BOTTOM);
       }
+    }finally{
+      EasyLoading.dismiss();
     }
   }
 
