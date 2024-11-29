@@ -1,6 +1,7 @@
 
 import 'dart:async';
 
+import 'package:carnival_fine_dining/screens/auth_ui/welcome_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,7 +20,9 @@ class _SplashScreenState extends State<SplashScreen>{
   void initState() {
     super.initState();
     Timer(Duration( seconds: 3),(){
-      Get.offAll(()=> MainScreen());
+      // Get.offAll(()=> MainScreen());
+      Get.offAll(()=> WelcomeScreen());
+
     });
   }
   @override
