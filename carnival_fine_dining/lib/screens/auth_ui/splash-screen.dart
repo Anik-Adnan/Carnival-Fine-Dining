@@ -1,7 +1,7 @@
 
 import 'dart:async';
 
-import 'package:carnival_fine_dining/screens/auth_ui/sigin_in_screen.dart';
+import 'package:carnival_fine_dining/screens/auth_ui/sign_in_screen.dart';
 import 'package:carnival_fine_dining/screens/auth_ui/welcome_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

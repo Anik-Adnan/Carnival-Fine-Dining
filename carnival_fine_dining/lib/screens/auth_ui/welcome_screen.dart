@@ -1,4 +1,5 @@
 
+import 'package:carnival_fine_dining/screens/auth_ui/sign_in_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -67,7 +68,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
                     color: Colors.white,
                     size: Get.width/12,),
                   label: const Text("Sign In with Mail",style: TextStyle(color: Colors.black),),
-                  onPressed: (){},
+                  onPressed: (){
+                    Get.to(()=> SignInScreen());
+                  },
                 ),
               ),
             ),
