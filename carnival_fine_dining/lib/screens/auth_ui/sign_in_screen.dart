@@ -1,4 +1,5 @@
 
+import 'package:carnival_fine_dining/screens/auth_ui/sign_up_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
@@ -23,15 +24,15 @@ class _SignInScreenState extends State<SignInScreen>{
             centerTitle: true,
             title: Text('Sign In',style: TextStyle(fontWeight: FontWeight.bold),),
           ),
-          body: Container(
-            child: Column(
+          body: Column(
               children: [
-                isKeyboardVisible ?  Text(''): Column(
-                  children:[
-                    Lottie.asset('assets/images/splash-screen.json')
-                  ],
+                isKeyboardVisible ?  Text(''):
+                SizedBox(
+                  width: Get.width,
+                  height: Get.height/4,
+                  child:Lottie.asset('assets/images/splash-screen.json'),
                 ),
-                SizedBox(height: Get.height/80),
+                SizedBox(height: Get.height/85),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 5.0),
                   width: Get.width,
@@ -96,16 +97,20 @@ class _SignInScreenState extends State<SignInScreen>{
                   ),
                 ),
                 SizedBox(height: Get.height/40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("Don't have an account?" ,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                    Text(" SignUp",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,),)
-                  ],
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Don't have an account?" ,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                      GestureDetector(
+                          child: Text(" SignUp",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,),),
+                        onTap: () => Get.offAll( ()=> SignUpScreen()),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
-          ),
         );
       },
     );
