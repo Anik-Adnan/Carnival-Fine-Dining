@@ -16,7 +16,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Welcome to BiswasShoppingBD',style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text(AppConstant.appName,style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: AppConstant.appSecondaryColor,
       ),
