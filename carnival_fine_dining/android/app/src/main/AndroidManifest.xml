@@ -1,10 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.carnival_fine_dining">
-
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-
-
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
         android:label="carnival_fine_dining"
         android:name="${applicationName}"
@@ -33,21 +27,6 @@
         </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
-
-        <!-- for notification channel -->
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_channel_id"
-            android:value="carnival_fine_dining" />
-
-        <!-- Firebase Messaging Service -->
-
-        <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            </intent-filter>
-        </receiver>
-
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
@@ -62,7 +41,5 @@
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
         </intent>
-        <package android:name="com.whatsapp" />
-
     </queries>
 </manifest>
