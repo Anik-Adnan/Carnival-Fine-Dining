@@ -33,7 +33,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>{
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Food Info'),
+        title: Text('${widget.foodModel.foodName}'),
         actions:  [
           GestureDetector(
             onTap: ()=> Get.to(CartScreen()),

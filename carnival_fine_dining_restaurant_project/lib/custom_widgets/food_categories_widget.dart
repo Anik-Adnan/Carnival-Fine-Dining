@@ -23,7 +23,7 @@ class FoodCategoriesWidget extends StatelessWidget {
         }
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Container(
-            height: Get.height / 5,
+            height: Get.height ,
             child: Center(
               child: CupertinoActivityIndicator(),
             ),

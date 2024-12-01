@@ -3,6 +3,7 @@
 import 'package:carnival_fine_dining_restaurant_project/screens/auth-ui/sigin-in-screen.dart';
 import 'package:carnival_fine_dining_restaurant_project/screens/user-panel/all_food_category_screen.dart';
 import 'package:carnival_fine_dining_restaurant_project/screens/user-panel/all_food_items_screen.dart';
+import 'package:carnival_fine_dining_restaurant_project/screens/user-panel/cart_screen.dart';
 
 import '../screens/user-panel/all_order_screen.dart';
 import '/utils/app_constant.dart';
@@ -78,7 +79,7 @@ class _DrawerWidgetState extends State<DrawerWidget>{
           },drawerTextStyle),
           _buildDrawerTile("Cart", Icons.shopping_cart, () {
             Get.back();
-            // Get.to(() => AllOrderScreen());
+            Get.to(() => CartScreen());
           },drawerTextStyle),
           _buildDrawerTile("Location", Icons.location_city, () {},drawerTextStyle),
           _buildDrawerTile("Contact", Icons.help_center, () {},drawerTextStyle),
@@ -98,6 +99,7 @@ class _DrawerWidgetState extends State<DrawerWidget>{
                 },
               )
           ),
+          // drawer footer logout and signIn
 
         ],
 

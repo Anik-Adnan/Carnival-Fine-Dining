@@ -89,7 +89,7 @@ class _MainScreenState extends State<MainScreen>{
               BannerWidget(),
 
               HeadingWidget(
-                headingTitle: "Flash Sale",
+                headingTitle: "Today's Hot Deals",
                 headingSubTitle: "According to your budget",
                 onTap: ()=> Get.to(AllFlashSaleProductsScreen()),
                 buttonText: "see more>>",

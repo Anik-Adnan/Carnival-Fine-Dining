@@ -34,7 +34,7 @@ class FlashSaleWidget extends StatelessWidget {
 
         if (snapshot.data!.docs.isEmpty) {
           return Center(
-            child: Text("No Hot Deal found!"),
+            child: Text("Today Has No Hot Deal"),
           );
         }
 

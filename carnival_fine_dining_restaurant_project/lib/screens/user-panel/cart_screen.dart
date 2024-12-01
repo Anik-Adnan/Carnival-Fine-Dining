@@ -50,7 +50,7 @@ class _CartScreenState extends State<CartScreen> {
 
           if (snapshot.data!.docs.isEmpty) {
             return Center(
-              child: Text("No products found!"),
+              child: Text("No Foods Carted Here!"),
             );
           }
 

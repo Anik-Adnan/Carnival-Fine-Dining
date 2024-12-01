@@ -21,7 +21,7 @@ class _AllFlashSaleProductsScreenState extends State<AllFlashSaleProductsScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FlashSale Products'),
+        title: Text('Todays Hot Deals'),
       ),
       body: FutureBuilder(
         future: FirebaseFirestore.instance.collection('foods').where('isSale',isEqualTo: true).get(),
@@ -42,7 +42,7 @@ class _AllFlashSaleProductsScreenState extends State<AllFlashSaleProductsScreen>
 
           if (snapshot.data!.docs.isEmpty) {
             return Center(
-              child: Text("No category found!"),
+              child: Text("No Hot Deals found!"),
             );
           }
 
