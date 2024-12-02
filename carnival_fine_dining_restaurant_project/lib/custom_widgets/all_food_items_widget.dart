@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_card/image_card.dart';
 import '../models/food_model.dart';
-import '../screens/user-panel/food_item_details_screen.dart';
+import '../screens/user-panel/food_details_screen.dart';
 
 class AllFoodItemsWidget extends StatelessWidget {
   const AllFoodItemsWidget({super.key});
@@ -33,7 +33,7 @@ class AllFoodItemsWidget extends StatelessWidget {
 
         if (snapshot.data!.docs.isEmpty) {
           return Center(
-            child: Text("No Food Item found!"),
+            child: Text("No Food Items found!"),
           );
         }
 
@@ -68,7 +68,7 @@ class AllFoodItemsWidget extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () => {
-                    Get.to(ProductDetailsScreen(foodModel: productModel,)),
+                    Get.to(FoodDetailsScreen(foodModel: productModel,)),
                   },
                     child: Padding(
                       padding: EdgeInsets.all(8.0),

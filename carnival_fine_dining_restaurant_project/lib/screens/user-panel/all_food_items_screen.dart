@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:image_card/image_card.dart';
 
 import '../../models/food_model.dart';
-import 'food_item_details_screen.dart';
+import 'food_details_screen.dart';
 
 class AllFoodItemsScreen extends StatefulWidget{
   const AllFoodItemsScreen({super.key});
@@ -79,7 +79,7 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen>{
                   children: [
                     GestureDetector(
                       onTap: () => {
-                      Get.to(ProductDetailsScreen(foodModel: foodModel,)),
+                      Get.to(FoodDetailsScreen(foodModel: foodModel,)),
                     },
                       child: Padding(
                         padding: EdgeInsets.all(8.0),

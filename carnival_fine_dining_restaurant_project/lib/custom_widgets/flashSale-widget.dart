@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_card/image_card.dart';
 import '../models/food_model.dart';
-import '../screens/user-panel/food_item_details_screen.dart';
+import '../screens/user-panel/food_details_screen.dart';
 
 class FlashSaleWidget extends StatelessWidget {
   const FlashSaleWidget({super.key});
@@ -34,7 +34,7 @@ class FlashSaleWidget extends StatelessWidget {
 
         if (snapshot.data!.docs.isEmpty) {
           return Center(
-            child: Text("No Hot Deal found!"),
+            child: Text("Today Has No Hot Deal"),
           );
         }
 
@@ -64,7 +64,7 @@ class FlashSaleWidget extends StatelessWidget {
                 return Row(
                   children: [
                     GestureDetector(
-                      onTap: () => Get.to(ProductDetailsScreen(foodModel: foodModel,)),
+                      onTap: () => Get.to(FoodDetailsScreen(foodModel: foodModel,)),
                       child: Padding(
                         padding: EdgeInsets.all(5.0),
                         child: Container(

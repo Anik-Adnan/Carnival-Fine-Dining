@@ -23,7 +23,7 @@ class FoodCategoriesWidget extends StatelessWidget {
         }
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Container(
-            height: Get.height / 5,
+            height: Get.height /5,
             child: Center(
               child: CupertinoActivityIndicator(),
             ),
@@ -38,7 +38,7 @@ class FoodCategoriesWidget extends StatelessWidget {
 
         if (snapshot.data != null) {
           return Container(
-            height: Get.height/2.2,
+            height: Get.height/1.4,
             child: GridView.builder(
               shrinkWrap: true,
               physics: BouncingScrollPhysics(),

@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:image_card/image_card.dart';
 
 import '../../models/food_model.dart';
-import 'food_item_details_screen.dart';
+import 'food_details_screen.dart';
 
 class AllFlashSaleProductsScreen extends StatefulWidget{
   const AllFlashSaleProductsScreen({super.key});
@@ -21,7 +21,7 @@ class _AllFlashSaleProductsScreenState extends State<AllFlashSaleProductsScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FlashSale Products'),
+        title: Text('Todays Hot Deals'),
       ),
       body: FutureBuilder(
         future: FirebaseFirestore.instance.collection('foods').where('isSale',isEqualTo: true).get(),
@@ -42,7 +42,7 @@ class _AllFlashSaleProductsScreenState extends State<AllFlashSaleProductsScreen>
 
           if (snapshot.data!.docs.isEmpty) {
             return Center(
-              child: Text("No category found!"),
+              child: Text("No Hot Deals found!"),
             );
           }
 
@@ -77,7 +77,7 @@ class _AllFlashSaleProductsScreenState extends State<AllFlashSaleProductsScreen>
                   children: [
                     GestureDetector(
                       onTap: () => {
-                      Get.to(ProductDetailsScreen(foodModel: foodModel,)),
+                      Get.to(FoodDetailsScreen(foodModel: foodModel,)),
                     },
                       child: Padding(
                         padding: EdgeInsets.all(8.0),
