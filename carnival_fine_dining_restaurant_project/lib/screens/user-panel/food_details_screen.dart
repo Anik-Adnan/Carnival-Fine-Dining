@@ -17,15 +17,15 @@ import '../../models/food_review_model.dart';
 import '../../utils/app_constant.dart';
 import 'cart_screen.dart';
 
-class ProductDetailsScreen extends StatefulWidget{
+class FoodDetailsScreen extends StatefulWidget{
   FoodModel foodModel;
-  ProductDetailsScreen({super.key,required this.foodModel });
+  FoodDetailsScreen({super.key,required this.foodModel });
 
   @override
-  State<StatefulWidget> createState() => _ProductDetailsScreenState();
+  State<StatefulWidget> createState() => _FoodDetailsScreenState();
   
 }
-class _ProductDetailsScreenState extends State<ProductDetailsScreen>{
+class _FoodDetailsScreenState extends State<FoodDetailsScreen>{
   User? user = FirebaseAuth.instance.currentUser;
   @override
   Widget build(BuildContext context) {

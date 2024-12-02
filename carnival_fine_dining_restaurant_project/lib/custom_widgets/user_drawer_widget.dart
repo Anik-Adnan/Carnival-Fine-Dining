@@ -4,6 +4,7 @@ import 'package:carnival_fine_dining_restaurant_project/screens/auth-ui/sigin-in
 import 'package:carnival_fine_dining_restaurant_project/screens/user-panel/all_food_category_screen.dart';
 import 'package:carnival_fine_dining_restaurant_project/screens/user-panel/all_food_items_screen.dart';
 import 'package:carnival_fine_dining_restaurant_project/screens/user-panel/cart_screen.dart';
+import 'package:carnival_fine_dining_restaurant_project/screens/user-panel/main-screen.dart';
 
 import '../screens/user-panel/all_order_screen.dart';
 import '/utils/app_constant.dart';
@@ -64,7 +65,10 @@ class _DrawerWidgetState extends State<DrawerWidget>{
             thickness: 1.5,
             color: Colors.grey,
           ),
-          _buildDrawerTile("Home", Icons.home, () {},drawerTextStyle),
+          _buildDrawerTile("Home", Icons.home, () {
+            Get.back();
+            Get.to(() => MainScreen());
+          },drawerTextStyle),
           _buildDrawerTile("Food Categories", Icons.category, () {
             Get.back();
             Get.to(() => AllFoodCategoryScreen());

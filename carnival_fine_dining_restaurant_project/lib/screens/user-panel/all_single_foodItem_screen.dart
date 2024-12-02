@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_card/image_card.dart';
 import '../../models/food_model.dart';
-import 'food_item_details_screen.dart';
+import 'food_details_screen.dart';
 
 class AllSingleFoodItemScreen extends StatefulWidget{
   String foodCategoryId;
@@ -41,7 +41,7 @@ class _AllSingleFoodItemScreenState extends State<AllSingleFoodItemScreen>{
 
           if (snapshot.data!.docs.isEmpty) {
             return Center(
-              child:const  Text("No Food Found!"),
+              child:const  Text("No Food Found in a category!"),
             );
           }
 
@@ -76,7 +76,7 @@ class _AllSingleFoodItemScreenState extends State<AllSingleFoodItemScreen>{
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Get.to(ProductDetailsScreen(foodModel: foodModel,));
+                        Get.to(FoodDetailsScreen(foodModel: foodModel,));
                       },
                       child: Padding(
                         padding: EdgeInsets.all(8.0),
