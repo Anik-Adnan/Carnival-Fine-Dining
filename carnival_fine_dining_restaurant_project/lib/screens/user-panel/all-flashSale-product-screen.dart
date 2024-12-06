@@ -58,20 +58,22 @@ class _AllFlashSaleProductsScreenState extends State<AllFlashSaleProductsScreen>
                 childAspectRatio: 0.7,
               ),
               itemBuilder: (context, index) {
-                final productData = snapshot.data!.docs[index];
+                final foodData = snapshot.data!.docs[index];
                 FoodModel foodModel = FoodModel(
-                  foodId: productData['foodId'],
-                  foodCategoryId: productData['foodCategoryId'],
-                  foodName: productData['foodName'],
-                  foodCategoryName: productData['foodCategoryName'],
-                  salePrice: productData['salePrice'],
-                  fullPrice: productData['fullPrice'],
-                  foodImages: productData['foodImages'],
-                  deliveryTime: productData['deliveryTime'],
-                  isSale: productData['isSale'],
-                  foodDescription: productData['foodDescription'],
-                  createdAt: productData['createdAt'],
-                  updatedAt: productData['updatedAt'],
+                  foodId: foodData['foodId'],
+                  foodCategoryId: foodData['foodCategoryId'],
+                  foodName: foodData['foodName'],
+                  foodCategoryName: foodData['foodCategoryName'],
+                  salePrice: foodData['salePrice'],
+                  fullPrice: foodData['fullPrice'],
+                  foodImages: foodData['foodImages'],
+                  deliveryTime: foodData['deliveryTime'],
+                  isSale: foodData['isSale'],
+                  foodDescription: foodData['foodDescription'],
+                  createdAt: foodData['createdAt'],
+                  updatedAt: foodData['updatedAt'],
+                  isBanner: foodData['isBanner'],
+                  bannerImg: foodData['bannerImg'],
                 );
                 return Row(
                   children: [

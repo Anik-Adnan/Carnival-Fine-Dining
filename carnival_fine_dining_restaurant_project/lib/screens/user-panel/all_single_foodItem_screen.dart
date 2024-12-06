@@ -23,7 +23,7 @@ class _AllSingleFoodItemScreenState extends State<AllSingleFoodItemScreen>{
         title: Text(widget.foodCategoryId),
       ),
       body: FutureBuilder(
-        future: FirebaseFirestore.instance.collection('foods').where('foodCategoryId', isEqualTo: widget.foodCategoryId).get(),
+        future: FirebaseFirestore.instance.collection('foods').get(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (snapshot.hasError) {
             return Center(
@@ -58,49 +58,57 @@ class _AllSingleFoodItemScreenState extends State<AllSingleFoodItemScreen>{
               ),
               itemBuilder: (context, index) {
                 final foodData = snapshot.data!.docs[index];
-                FoodModel foodModel = FoodModel(
-                  foodId: foodData['foodId'],
-                  foodCategoryId: foodData['foodCategoryId'],
-                  foodName: foodData['foodName'],
-                  foodCategoryName: foodData['foodCategoryName'],
-                  salePrice: foodData['salePrice'],
-                  fullPrice: foodData['fullPrice'],
-                  foodImages: foodData['foodImages'],
-                  deliveryTime: foodData['deliveryTime'],
-                  isSale: foodData['isSale'],
-                  foodDescription: foodData['foodDescription'],
-                  createdAt: foodData['createdAt'],
-                  updatedAt: foodData['updatedAt'],
-                );
-                return Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Get.to(FoodDetailsScreen(foodModel: foodModel,));
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Container(
-                          child: FillImageCard(
-                            borderRadius: 20.0,
-                            width: Get.width / 3.5,
-                            heightImage: Get.height / 8,
-                            imageProvider: CachedNetworkImageProvider(
-                              foodModel.foodImages[0],
-                            ),
-                            title: Center(
-                              child: Text(
-                                foodModel.foodName,
-                                style: TextStyle(fontSize: 12.0),
-                                overflow: TextOverflow.ellipsis,
+
+                if(foodData['foodCategoryId'].toString() == widget.foodCategoryId.toString()){
+                  FoodModel foodModel = FoodModel(
+                    foodId: foodData['foodId'],
+                    foodCategoryId: foodData['foodCategoryId'],
+                    foodName: foodData['foodName'],
+                    foodCategoryName: foodData['foodCategoryName'],
+                    salePrice: foodData['salePrice'],
+                    fullPrice: foodData['fullPrice'],
+                    foodImages: foodData['foodImages'],
+                    deliveryTime: foodData['deliveryTime'],
+                    isSale: foodData['isSale'],
+                    foodDescription: foodData['foodDescription'],
+                    createdAt: foodData['createdAt'],
+                    updatedAt: foodData['updatedAt'],
+                    isBanner: foodData['isBanner'],
+                    bannerImg: foodData['bannerImg'],
+                  );
+                  return Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(FoodDetailsScreen(foodModel: foodModel,));
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Container(
+                            child: FillImageCard(
+                              borderRadius: 20.0,
+                              width: Get.width / 3.5,
+                              heightImage: Get.height / 8,
+                              imageProvider: CachedNetworkImageProvider(
+                                foodModel.foodImages[0],
+                              ),
+                              title: Center(
+                                child: Text(
+                                  foodModel.foodName,
+                                  style: TextStyle(fontSize: 12.0),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                );
+                    ],
+                  );
+                }
+                // Return an empty container if the category ID does not match
+                return SizedBox.shrink();
+
               },
             );
           }
