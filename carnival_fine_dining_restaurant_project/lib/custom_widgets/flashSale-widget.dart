@@ -60,6 +60,8 @@ class FlashSaleWidget extends StatelessWidget {
                   foodDescription: foodData['foodDescription'],
                   createdAt: foodData['createdAt'],
                   updatedAt: foodData['updatedAt'],
+                  isBanner: foodData['isBanner'],
+                  bannerImg: foodData['bannerImg'],
                 );
                 return Row(
                   children: [

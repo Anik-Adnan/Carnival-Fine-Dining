@@ -60,9 +60,12 @@ class AllFoodItemsWidget extends StatelessWidget {
                 foodImages: foodData['foodImages'],
                 deliveryTime: foodData['deliveryTime'],
                 isSale: foodData['isSale'],
+                isBanner: foodData['isBanner'],
+                bannerImg: foodData['bannerImg'],
                 foodDescription: foodData['foodDescription'],
                 createdAt: foodData['createdAt'],
                 updatedAt: foodData['updatedAt'],
+
               );
               return Row(
                 children: [

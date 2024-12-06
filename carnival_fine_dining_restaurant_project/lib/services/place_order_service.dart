@@ -128,7 +128,7 @@ void placeOrder({
         "Order Confirmed",
         "Thank you for your order!",
         colorText: Colors.white,
-        duration: Duration(seconds: 5),
+        duration: Duration(seconds: 2),
       );
 
       EasyLoading.dismiss();

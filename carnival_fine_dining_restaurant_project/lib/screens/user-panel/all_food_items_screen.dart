@@ -74,6 +74,8 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen>{
                   foodDescription: foodData['foodDescription'],
                   createdAt: foodData['createdAt'],
                   updatedAt: foodData['updatedAt'],
+                  isBanner: foodData['isBanner'],
+                  bannerImg: foodData['bannerImg'],
                 );
                 return Row(
                   children: [
