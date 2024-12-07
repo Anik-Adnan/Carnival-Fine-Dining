@@ -238,7 +238,8 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen>{
 
               // reviews
               FutureBuilder(
-                future: FirebaseFirestore.instance.collection('foods').doc(widget.foodModel.foodId).collection('reviews').get(),
+                future: FirebaseFirestore.instance.collection('foods').doc(widget.foodModel.foodId
+                ).collection('reviews').get(),
                 builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
                   if (snapshot.hasError) {
                     return Center(
