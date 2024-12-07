@@ -29,7 +29,7 @@ class BannerController extends GetxController {
       // Update the controller with the fetched banners
       banners.assignAll(bannerList);
 
-      print("Banner list = "+banners.toString());
+      // print("Banner list = "+banners.toString());
 
     } catch (e) {
       debugPrint("Error fetching banners: $e");
