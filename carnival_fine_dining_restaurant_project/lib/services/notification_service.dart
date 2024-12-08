@@ -175,9 +175,7 @@ class NotificationService{
       BuildContext context,
       RemoteMessage message,
       ) async {
-    print(
-        "Navigating to appointments screen. Hit here to handle the message. Message data: ${message
-            .data}");
+    // print("Navigating to appointments screen. Hit here to handle the message. Message data: ${message.data}");
 
     Navigator.push(
       context,

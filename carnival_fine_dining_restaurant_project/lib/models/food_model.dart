@@ -65,7 +65,45 @@ class FoodModel{
         createdAt: json['createdAt'],
         updatedAt: json['updatedAt'],
       isBanner: json['isBanner'],
-      bannerImg: 'bannerImg',
+      bannerImg: json['bannerImg'],
     );
+  }
+  factory FoodModel.fromJson(Map<String, dynamic> json) {
+    return FoodModel(
+      foodId: json['foodId'],
+      foodCategoryId: json['foodCategoryId'],
+      foodName: json['foodName'],
+      foodCategoryName: json['foodCategoryName'],
+      salePrice: json['salePrice'],
+      fullPrice: json['fullPrice'],
+      foodImages: json['foodImages'],
+      deliveryTime: json['deliveryTime'],
+      isSale: json['isSale'],
+      foodDescription: json['foodDescription'],
+      createdAt: json['createdAt'],
+      updatedAt: json['updatedAt'],
+      isBanner: json['isBanner'],
+      bannerImg: json['bannerImg'],
+    );
+
+  }
+
+  @override
+  String toString() {
+    return 'FoodModel(foodId: $foodId,'
+        ' foodCategoryId: $foodCategoryId,'
+        ' foodName: $foodName,'
+        ' foodCategoryName: $foodCategoryName,'
+        ' salePrice: $salePrice,'
+        ' fullPrice: $fullPrice,'
+        ' foodImages: $foodImages,'
+        ' deliveryTime: $deliveryTime,'
+        ' isSale: $isSale,'
+        ' createdAt: $createdAt,'
+        ' updatedAt: $updatedAt,'
+        ' isBanner: $isBanner,'
+        ' bannerImg: $bannerImg,'
+        ' foodDescription: $foodDescription)';
+
   }
 }
