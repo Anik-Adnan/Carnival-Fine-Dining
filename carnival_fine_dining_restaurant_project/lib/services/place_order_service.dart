@@ -86,7 +86,7 @@ void placeOrder({
               .doc(cartModel.foodId.toString())
               .delete()
               .then((value) {
-            print('Delete cart Products $cartModel.productId.toString()');
+            // print('Delete cart Products $cartModel.productId.toString()');
           });
         }
 
@@ -129,6 +129,7 @@ void placeOrder({
         "Thank you for your order!",
         colorText: Colors.white,
         duration: Duration(seconds: 2),
+        snackPosition: SnackPosition.TOP,
       );
 
       EasyLoading.dismiss();
