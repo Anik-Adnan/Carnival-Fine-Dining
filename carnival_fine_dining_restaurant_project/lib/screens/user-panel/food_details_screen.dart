@@ -317,9 +317,9 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen>{
 
   static Future<void> sendMessageOnWhatsApp({required FoodModel productModel}) async{
 
-    final number = "+8801650107332";
-    final message = "Hello ${AppConstant.appName}!\nI want to know about this product\nProduct Name: ${productModel.foodName}\nProduct ID: ${productModel.foodId}";
-    final url = 'https://wa.me/$number?text=${Uri.encodeComponent(message)}';
+    final contactNumber = AppConstant.WhatAppNumber;
+    final message = "Hello ${AppConstant.appName}!\nI want to know about this product\nCategoryName: ${productModel.foodCategoryName}\nProduct Name: ${productModel.foodName}";
+    final url = 'https://wa.me/$contactNumber?text=${Uri.encodeComponent(message)}';
 
     try {
       Uri requestedUri = Uri.parse(url);// .parse is the correct method
