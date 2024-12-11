@@ -19,6 +19,7 @@
 - Contact the restaurant via WhatsApp, Facebook, or phone.  
 - Dine in or order food for delivery.  
 
+
 ### Authentication  
 - Email-based signup and login required for placing orders and submitting reviews.  
 
