@@ -11,6 +11,7 @@
 - Adjust food details, prices, discounts, and promotional offers.  
 - Monitor and manage orders in real time (Pending, Processing, Delivering).  
 
+
 ### User Mobile App  
 - Browse food menus with detailed descriptions and high-quality images.  
 - Place orders securely and track their status in real time.  
