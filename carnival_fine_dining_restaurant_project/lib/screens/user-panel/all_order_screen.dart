@@ -132,8 +132,7 @@ class _AllOrderScreenState extends State<AllOrderScreen> {
                           ],
                         ),
                         trailing: orderModel.status ==true ? ElevatedButton(
-                            onPressed: () => Get.to(
-                                    ()=> AddReviewScreen(orderModel: orderModel)),
+                            onPressed: () => ReviewAndRatingDialog.showReviewDialog(context, orderModel),
                             child: Text("Review"))
                             :SizedBox.shrink(),
                       ),
