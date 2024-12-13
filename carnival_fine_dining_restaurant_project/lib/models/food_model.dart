@@ -12,6 +12,8 @@ class FoodModel{
   final bool isBanner;
   final String bannerImg;
   final String foodDescription;
+  final String orderCount;
+  final String avgRating;
   final dynamic createdAt;
   final dynamic updatedAt;
 
@@ -28,6 +30,8 @@ class FoodModel{
     required this.isBanner,
     required this.bannerImg,
     required this.foodDescription,
+    required this.orderCount,
+    required this.avgRating,
     required this.createdAt,
     required this.updatedAt,
   });
@@ -45,6 +49,8 @@ class FoodModel{
       'isBanner': isBanner,
       'bannerImg' : bannerImg,
       'foodDescription': foodDescription,
+      'orderCount': orderCount,
+      'avgRating': avgRating,
       'createdAt': createdAt,
       'updatedAt': updatedAt,
     };
@@ -61,7 +67,9 @@ class FoodModel{
         foodImages: json['foodImages'],
         deliveryTime: json['deliveryTime'],
         isSale: json['isSale'],
-        foodDescription: json['foodDescription'],
+      foodDescription: json['foodDescription'],
+      orderCount: json['orderCount'],
+      avgRating: json['avgRating'],
         createdAt: json['createdAt'],
         updatedAt: json['updatedAt'],
       isBanner: json['isBanner'],
@@ -80,6 +88,8 @@ class FoodModel{
       deliveryTime: json['deliveryTime'],
       isSale: json['isSale'],
       foodDescription: json['foodDescription'],
+      orderCount: json['orderCount'],
+      avgRating: json['avgRating'],
       createdAt: json['createdAt'],
       updatedAt: json['updatedAt'],
       isBanner: json['isBanner'],

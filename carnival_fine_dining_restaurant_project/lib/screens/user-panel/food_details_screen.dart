@@ -27,6 +27,7 @@ class FoodDetailsScreen extends StatefulWidget{
 }
 class _FoodDetailsScreenState extends State<FoodDetailsScreen>{
   User? user = FirebaseAuth.instance.currentUser;
+
   @override
   Widget build(BuildContext context) {
     CalculateProductRatingCotroller calculateProductRatingCotroller = Get.put(CalculateProductRatingCotroller(widget.foodModel.foodId));
@@ -111,7 +112,7 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen>{
                                                                       ),
                                   ),
                             ),
-                            Text(calculateProductRatingCotroller.avgRating.toString(),style: TextStyle(fontWeight: FontWeight.bold),)
+                            Text(widget.foodModel.avgRating,style: TextStyle(fontWeight: FontWeight.bold),)
                           ],
                         ),
                       ),

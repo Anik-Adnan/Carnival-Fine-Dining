@@ -63,6 +63,8 @@ class AllFoodItemsWidget extends StatelessWidget {
                 isBanner: foodData['isBanner'],
                 bannerImg: foodData['bannerImg'],
                 foodDescription: foodData['foodDescription'],
+                orderCount: foodData['orderCount'],
+                avgRating: foodData['avgRating'],
                 createdAt: foodData['createdAt'],
                 updatedAt: foodData['updatedAt'],
 

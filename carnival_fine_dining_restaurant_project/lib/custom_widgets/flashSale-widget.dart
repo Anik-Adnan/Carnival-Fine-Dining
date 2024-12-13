@@ -1,6 +1,3 @@
-
-
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
@@ -58,6 +55,8 @@ class FlashSaleWidget extends StatelessWidget {
                   deliveryTime: foodData['deliveryTime'],
                   isSale: foodData['isSale'],
                   foodDescription: foodData['foodDescription'],
+                  orderCount: foodData['orderCount'],
+                  avgRating: foodData['avgRating'],
                   createdAt: foodData['createdAt'],
                   updatedAt: foodData['updatedAt'],
                   isBanner: foodData['isBanner'],
