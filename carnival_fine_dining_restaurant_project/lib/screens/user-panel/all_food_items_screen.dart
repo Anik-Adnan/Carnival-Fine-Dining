@@ -72,6 +72,8 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen>{
                   deliveryTime: foodData['deliveryTime'],
                   isSale: foodData['isSale'],
                   foodDescription: foodData['foodDescription'],
+                  orderCount: foodData['orderCount'],
+                  avgRating: foodData['avgRating'],
                   createdAt: foodData['createdAt'],
                   updatedAt: foodData['updatedAt'],
                   isBanner: foodData['isBanner'],
