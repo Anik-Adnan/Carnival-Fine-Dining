@@ -199,7 +199,7 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen>{
                           child: const Text("Whats App",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                           onPressed: () {
 
-                            sendMessageOnWhatsApp(productModel: widget.foodModel);
+                            sendMessageOnWhatsApp(foodModel: widget.foodModel);
                           },
                         ),
                       ),
@@ -316,17 +316,17 @@ class _FoodDetailsScreenState extends State<FoodDetailsScreen>{
     );
   }
 
-  static Future<void> sendMessageOnWhatsApp({required FoodModel productModel}) async{
+  static Future<void> sendMessageOnWhatsApp({required FoodModel foodModel}) async{
 
     final contactNumber = AppConstant.WhatAppNumber;
-    final message = "Hello ${AppConstant.appName}!\nI want to know about this product\nCategoryName: ${productModel.foodCategoryName}\nProduct Name: ${productModel.foodName}";
+    final message = "Hello ${AppConstant.appName}!\nFood-CategoryName: ${foodModel.foodCategoryName}\nFood Name: ${foodModel.foodName}\nTell me something about this food.\nThank You.";
     final url = 'https://wa.me/$contactNumber?text=${Uri.encodeComponent(message)}';
 
     try {
       Uri requestedUri = Uri.parse(url);// .parse is the correct method
 
       if (await canLaunchUrl(requestedUri)) {
-        await launchUrl(requestedUri);
+        await launchUrl(requestedUri,mode: LaunchMode.externalApplication);
       } else {
         throw  Exception('Could not launch $url');
       }
